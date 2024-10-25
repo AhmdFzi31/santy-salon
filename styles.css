@@ -14,7 +14,7 @@ header {
 }
 
 .carousel-item img {
-    height: 400px; /* Set a fixed height for the images */
+    height: 200px; /* Set a fixed height for the images */
     object-fit: cover; /* Cover the area without stretching */
 }
 
@@ -105,9 +105,30 @@ main {
 .gallery img {
     width: 10%;
     height: auto;
+    align-items: center;
 }
 .gallery .row {
     margin-bottom: 20px;
+    text-align: center;
+}
+.gallery-item {
+    margin-bottom: 20px;
+    align-items: center;
+}
+.gallery-item img {
+    width: 75%;
+    height: auto;
+    align-items: center;
+}
+.gallery-item .description {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+@media (max-width: 767.98px) {
+    .gallery-item {
+        flex-direction: column;
+    }
 }
 .btn-learn-more {
     background-color: #f8f9fa;
