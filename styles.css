@@ -115,6 +115,29 @@ main {
     padding: 10px 20px;
     font-size: 14px;
 }
+
+.garis-1 {
+    width: 100%; /* Mengatur panjang garis (75% dari lebar elemen induk) */
+    height: 3px; /* Mengatur ketebalan garis */
+    background-color: #000; /* Mengatur warna garis */
+    margin: 20px auto; /* Mengatur margin atas dan bawah, dan center */
+}
+
+.garis-2 {
+    width: 102%; /* Mengatur panjang garis (75% dari lebar elemen induk) */
+    height: 2px; /* Mengatur ketebalan garis */
+    background-color: #000; /* Mengatur warna garis */
+    margin: 20px auto; /* Mengatur margin atas dan bawah, dan center */
+    margin-left: -20px;
+}
+
+.garis-3 {
+    width: 102%; /* Mengatur panjang garis (75% dari lebar elemen induk) */
+    height: 3px; /* Mengatur ketebalan garis */
+    background-color: #000; /* Mengatur warna garis */
+    margin: 20px auto; /* Mengatur margin atas dan bawah, dan center */
+    margin-left: -20px;
+}
 .about-us, .gallery-section {
     padding: 40px 0;
 }
@@ -164,6 +187,62 @@ main {
     margin: 10px;
     padding: 10px;
     background-color: white;
+}
+
+.service-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.service-item {
+    text-align: center;
+    padding: 20px;
+}
+.service-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.service-item p {
+    font-size: 14px;
+    text-align: justify;
+}
+.service-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.visit {
+    text-align: center;
+    margin-top: 50px;
+}
+.visit img {
+    width: 100px;
+    height: 100px;
+}
+.visit h2 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+.visit p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 footer {
