@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="login.css"> <!-- Menghubungkan CSS terpisah -->
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="Login-form">
+            <h1>Login</h1>
+            <form id="LoginForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" placeholder="Username" required>
+                    <i class="bx bxs-user"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Login</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Menangani pengiriman form
+        $('#LoginForm').on('submit', function (e) {
+            e.preventDefault(); // Menghentikan pengiriman form default
+            const username = $('#username').val();
+            const password = $('#password').val();
+
+            // Cek username dan password (ini hanya contoh, seharusnya menggunakan backend untuk autentikasi)
+            if (username === 'admin' && password === 'admin') {
+                // Arahkan ke halaman admin jika login berhasil
+                window.location.href = 'dashboard.html';
+            } else {
+                alert('Invalid username or password');
+            }
+        });
+    </script>
+</body>
+
+</html>
