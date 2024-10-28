@@ -108,12 +108,31 @@ nav ul li a {
     }
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
+.footer {
     background-color: #333;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+.footer .social-icons a {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem; /* Increase font size */
+    transition: transform 0.3s ease; /* Add transition for animation */
+}
+.footer .social-icons a:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+.footer .social-icons i {
+    font-size: 36px; /* Increase icon size */
+    margin-right: 10px;
 }
