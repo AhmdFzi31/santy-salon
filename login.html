@@ -14,7 +14,9 @@
 
     <div class="wrapper">
         <div class="Login-form">
-            <h1>Login</h1>
+            <h1>Santy Salon</h1>
+            <hr>
+            <h2>Login</h2>
             <form id="LoginForm">
                 <div class="form-group">
                     <input type="text" class="form-control" id="username" placeholder="Username" required>
@@ -24,12 +26,22 @@
                     <input type="password" class="form-control" id="password" placeholder="Password" required>
                     <i class="bx bxs-lock-alt"></i>
                 </div>
-                <button type="submit" class="btn btn-success btn-block">Login</button>
+
+                <div class="remeber-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#"Forgot password>Forgot Password</a>
+                </div>
+                <button type="submit" id="btn" class="btn">Login</button>
+
+                <div class="register-link">
+                    <p>Don't have an account <a href="#">Register</a></p>
+                </div>
             </form>
         </div>
     </div>
 
 
+    <script src="/dist/sweetalert2.all.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
@@ -42,7 +54,15 @@
             // Cek username dan password (ini hanya contoh, seharusnya menggunakan backend untuk autentikasi)
             if (username === 'admin' && password === 'admin') {
                 // Arahkan ke halaman admin jika login berhasil
-                window.location.href = 'dashboard.html';
+                window.location.href = '/code/dashboard.html';
+                const btn = document.getElementById('btn');
+                btn.addEventListener('click', function(){
+                    Swal.fire({
+                        title: 'Selamat Datang',
+                        text: "Anda Berhasil Login",
+                        icon: 'Success',
+                    })
+                })
             } else {
                 alert('Invalid username or password');
             }
