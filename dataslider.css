@@ -1,4 +1,51 @@
 body {
+    overflow-x: hidden; /* Menghindari scroll horizontal */
+}
+
+/* Styling untuk sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Mulai tersembunyi */
+    width: 250px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    padding: 20px;
+    transition: left 0.3s ease; /* Transisi saat sidebar muncul */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Bayangan untuk sidebar */
+}
+
+/* Ketika sidebar aktif */
+.sidebar.active {
+    left: 0; /* Tampilkan sidebar */
+}
+
+/* Styling untuk konten utama */
+.content {
+    transition: margin-left 0.3s ease; /* Transisi saat konten bergerak */
+    padding: 20px;
+}
+
+/* Tambahkan padding untuk konten utama saat sidebar dibuka */
+.content.active {
+    margin-left: 250px; /* Bergeser ke kanan saat sidebar aktif */
+}
+
+/* Styling untuk navbar */
+.navbar {
+    transition: margin-left 0.3s ease; /* Transisi saat navbar bergerak */
+}
+
+/* Tambahkan margin untuk navbar saat sidebar dibuka */
+.navbar.active {
+    margin-left: 250px; /* Bergeser ke kanan saat sidebar aktif */
+}
+
+
+
+
+
+body {
     font-family: Arial, sans-serif;
 }
 .sidebar {
