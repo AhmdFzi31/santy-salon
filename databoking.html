@@ -13,11 +13,9 @@
 
 <body>
     <div class="d-flex flex-column flex-md-row">
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar">
             <div class="logo">
-                <img alt="Logo" height="50"
-                    src="https://storage.googleapis.com/a1aa/image/EVnmmdVDgaZtLJ6AF3QziLYg6vVjL985TarcBl6mB2nMKm6E.jpg"
-                    width="50" />
+                <img alt="Logo" height="50" src="logo.jpg" width="50" />
                 <span>
                     Santy Salon
                 </span>
@@ -55,19 +53,15 @@
                     </i>
                     Ulasan Pelanggan
                 </a>
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-comments">
-                    </i>
-                    LogOut
-                </a>
             </nav>
         </div>
+
+        <!-- Navbar -->
         <div class="content flex-grow-1">
-            <nav class="navbar navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
                 <div class="container-fluid">
-                    <button class="navbar-toggler" type="button">
-                        <span class="navbar-toggler-icon">
-                        </span>
+                    <button class="btn btn-outline-primary" id="sidebarToggle">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
                     <a class="navbar-brand" href="dashboard.html">
                         Home
@@ -77,11 +71,10 @@
                         </i>
                     </button>
                 </div>
+                <button class="btn btn-outline-danger" id="Logout"> Logout</button>
             </nav>
-            <h2>
-                Data Boking
-            </h2>
-            <div class="container">
+            <div class="content" id="content">
+                <h1>Data Booking</h1>
                 <div class="table-container">
                     <h5>Jadwal Booking Santy Salon</h5>
                     <div class="d-flex justify-content-between mb-3">
@@ -137,16 +130,37 @@
                     </div>
                 </div>
             </div>
-            <div class="footer">
-                <p>
-                    Copyright © 2025 Santy Salon. All rights reserved
-                </p>
-            </div>
         </div>
     </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGz1U5rK5w5l5h7Qz8l6/1e5p6VR1zj7ns6V+5z5p2l5h" crossorigin="anonymous"></script>
+    <div class="footer">
+        <p>Copyright <i class="fas fa-copyright"></i> 2025 Santy Salon. All rights reserved</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz4fnFO9gybBogGz1U5rK5w5l5h7Qz8l6/1e5p6VR1zj7ns6V+5z5p2l5h"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#sidebarToggle').click(function () {
+                $('#sidebar').toggleClass('active');
+                $('#content').toggleClass('active');
+                $('#navbar').toggleClass('active');
+            });
+           
+            $('#Logout').click(function() {
+                // Ganti dengan logika logout yang sesuai
+                alert('Anda telah logout!');
+                // Misalnya, redirect ke halaman login
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+
 
 </body>
+
 </html>
