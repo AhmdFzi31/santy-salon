@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
@@ -12,11 +13,13 @@
 </head>
 
 <body>
+
+    <!-- Sidebar -->
     <div class="d-flex flex-column flex-md-row">
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar">
             <div class="logo">
                 <img alt="Logo" height="50"
-                    src="https://storage.googleapis.com/a1aa/image/EVnmmdVDgaZtLJ6AF3QziLYg6vVjL985TarcBl6mB2nMKm6E.jpg"
+                    src="logo.jpg"
                     width="50" />
                 <span>
                     Santy Salon
@@ -55,19 +58,15 @@
                     </i>
                     Ulasan Pelanggan
                 </a>
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-comments">
-                    </i>
-                    LogOut
-                </a>
             </nav>
         </div>
+
+        <!-- Navbar -->
         <div class="content flex-grow-1">
-            <nav class="navbar navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
                 <div class="container-fluid">
-                    <button class="navbar-toggler" type="button">
-                        <span class="navbar-toggler-icon">
-                        </span>
+                    <button class="btn btn-outline-primary" id="sidebarToggle">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
                     <a class="navbar-brand" href="dashboard.html">
                         Home
@@ -77,59 +76,65 @@
                         </i>
                     </button>
                 </div>
-            </nav>
-            <h2>Dashboard</h2>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <a class="card-title" href="dataslider.html">Slider</a>
-                            <i class="fas fa-sliders-h"></i>
+                <button class="btn btn-outline-danger" id="Logout"> Logout</button>
+            </nav> 
+            <div class="content" id="content">
+                <h1>Dashboard</h1>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <a class="card-title" href="dataslider.html">Slider</a>
+                                <i class="fas fa-sliders-h"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card">
-                            <a class="card-title" href="datagallery.html">Gallery</a>
-                            <i class="fas fa-images"></i>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <a class="card-title" href="datagallery.html">Gallery</a>
+                                <i class="fas fa-images"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card">
-                            <a class="card-title" href="#">Ulasan</a>
-                            <i class="fas fa-calendar-check"></i>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <a class="card-title" href="#">Ulasan</a>
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card">
-                            <a class="card-title" href="databoking.html">List Booking</a>
-                            <i class="fas fa-list"></i>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <a class="card-title" href="databoking.html">List Booking</a>
+                                <i class="fas fa-list"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-        <div class="footer">
-            <p>Copyright <i class="fas fa-copyright"></i> 2025 Santy Salon. All rights reserved</p>
-        </div>
+    </div>
 
-        <script>
-            function navigateTo(page) {
-                window.location.href = page;
-            }
-            function toggleSidebar() {
-                const sidebar = document.querySelector('.sidebar');
-                if (sidebar.style.display === 'none' || sidebar.style.display === '') {
-                    sidebar.style.display = 'block';
-                } else {
-                    sidebar.style.display = 'none';
-                }
-            }
-            // Show the dashboard by default
-            document.getElementById('dashboard').style.display = 'block';
-        </script>
+    <div class="footer">
+        <p>Copyright <i class="fas fa-copyright"></i> 2025 Santy Salon. All rights reserved</p>
+    </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#sidebarToggle').click(function () {
+                $('#sidebar').toggleClass('active');
+                $('#content').toggleClass('active');
+                $('#navbar').toggleClass('active');
+            });
+           
+            $('#Logout').click(function() {
+                // Ganti dengan logika logout yang sesuai
+                alert('Anda telah logout!');
+                // Misalnya, redirect ke halaman login
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
 </body>
 
 </html>
