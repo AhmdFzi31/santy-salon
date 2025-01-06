@@ -3,18 +3,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #a58c8e;
 }
 
 header {
-    background-color: #9b9b9b;
-    color: white;
+    background-color: #a58c8e;
+    color: #a58c8e;
     padding: 10px 0;
     text-align: center;
 }
 
 .carousel-item img {
-    height: 200px; /* Set a fixed height for the images */
+    height: 600px; /* Set a fixed height for the images */
     object-fit: cover; /* Cover the area without stretching */
 }
 
